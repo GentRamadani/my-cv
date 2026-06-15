@@ -28,7 +28,7 @@ with open(resume_file, "rb") as pdf_file:
 profile_pic = Image.open(profile_pic_file)
 
 # Sidebar navigation
-page = st.sidebar.radio("Navigate", ["Home", "About"])
+page = st.sidebar.radio("Navigate", ["Home", "About", "Projects"])
 
 if page == "Home":
     # --- HERO SECTION ---
@@ -126,3 +126,45 @@ elif page == "About":
     # Show LinkedIn and Email only on the About page
     st.write("📫", EMAIL)
     st.write(f"Feel free to connect with me on [LinkedIn]({LINKEDIN_URL}).")
+
+
+elif page == "Projects":
+    st.title("Projects")
+
+    st.subheader("📊 Customer Churn Prediction")
+    st.write("""
+    Developed a machine learning model using Python and Scikit-learn to predict
+    customer churn for a telecommunications company. The project included data
+    cleaning, feature engineering, model training, and performance evaluation.
+    """)
+    st.write("**Technologies:** Python, Pandas, Scikit-learn, Streamlit")
+
+    st.write("---")
+
+    st.subheader("🏦 Banking Fraud Detection System")
+    st.write("""
+    Built a fraud detection solution for banking transactions using historical
+    transaction data. The model identified suspicious activities and generated
+    alerts for potential fraud cases.
+    """)
+    st.write("**Technologies:** Python, SQL, Machine Learning")
+
+    st.write("---")
+
+    st.subheader("📈 Sales Performance Dashboard")
+    st.write("""
+    Designed an interactive dashboard to track sales performance, customer trends,
+    and product profitability. The dashboard helped management make data-driven
+    business decisions.
+    """)
+    st.write("**Technologies:** Power BI, SQL, Excel")
+
+    st.write("---")
+
+    st.subheader("🏥 Healthcare Analytics Project")
+    st.write("""
+    Analyzed healthcare data to identify trends in patient outcomes and hospital
+    resource utilization. Created reports and visualizations to support operational
+    improvements.
+    """)
+    st.write("**Technologies:** Python, Tableau, SQL")
