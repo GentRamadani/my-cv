@@ -169,7 +169,9 @@ elif page == "Projects":
     """)
     st.write("**Technologies:** Python, Tableau, SQL")
 
-    elif page == "Lessons":
+
+# ✅ FIXED PART (LESSONS - corrected indentation)
+elif page == "Lessons":
 
     lesson_page = st.sidebar.selectbox(
         "Select Lecture",
