@@ -28,7 +28,7 @@ with open(resume_file, "rb") as pdf_file:
 profile_pic = Image.open(profile_pic_file)
 
 # Sidebar navigation
-page = st.sidebar.radio("Navigate", ["Home", "About", "Projects"])
+page = st.sidebar.radio("Navigate", ["Home", "About", "Projects", "Lessons"])
 
 if page == "Home":
     # --- HERO SECTION ---
@@ -168,3 +168,37 @@ elif page == "Projects":
     improvements.
     """)
     st.write("**Technologies:** Python, Tableau, SQL")
+
+    elif page == "Lessons":
+
+    lesson_page = st.sidebar.selectbox(
+        "Select Lecture",
+        ["Lecture_12"]
+    )
+
+    if lesson_page == "Lecture_12":
+        st.title("Lecture 12")
+
+        st.subheader("Introduction to Data Visualization")
+
+        st.write("""
+        This lecture covers the fundamentals of data visualization,
+        including charts, graphs, dashboards, and best practices for
+        presenting data effectively.
+        """)
+
+        st.write("### Topics Covered")
+        st.write("""
+        - Bar Charts
+        - Line Charts
+        - Pie Charts
+        - Dashboards
+        - Power BI Basics
+        - Streamlit Visualizations
+        """)
+
+        st.write("### Exercise")
+        st.write("""
+        Create a dashboard that displays sales data and identify
+        the best-performing products.
+        """)
