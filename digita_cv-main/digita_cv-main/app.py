@@ -181,26 +181,56 @@ elif page == "Lessons":
     if lesson_page == "Lecture_12":
         st.title("Lecture 12")
 
-        st.subheader("Introduction to Data Visualization")
-
+        st.subheader("Introduction to SQL")
         st.write("""
-        This lecture covers the fundamentals of data visualization,
-        including charts, graphs, dashboards, and best practices for
-        presenting data effectively.
+        SQL (Structured Query Language) is the standard language used to communicate
+        with databases. It allows you to store, retrieve, update, and delete data
+        from a database.
         """)
 
-        st.write("### Topics Covered")
+        st.subheader("Relationships in SQL")
         st.write("""
-        - Bar Charts
-        - Line Charts
-        - Pie Charts
-        - Dashboards
-        - Power BI Basics
-        - Streamlit Visualizations
+        In SQL, relationships define how tables are connected to each other.
+
+        • One-to-One (1:1): One record in Table A is linked to one record in Table B.
+
+        • One-to-Many: One record in Table A is linked to many records in Table B.
+
+        • Many-to-Many: Many records in Table A can be linked to many records in Table B.
         """)
 
-        st.write("### Exercise")
+        st.subheader("Difference between Star Schema and Snowflake Schema")
         st.write("""
-        Create a dashboard that displays sales data and identify
-        the best-performing products.
+        The Star Schema and Snowflake Schema are two approaches to data warehouse design.
+
+        In the Star Schema, a central fact table is connected to dimension tables,
+        forming a star-like structure. This design is simpler and faster for querying.
+
+        On the other hand, the Snowflake Schema normalizes dimension tables into
+        multiple related tables, resembling a snowflake. While it reduces data
+        redundancy, it can make queries more complex.
+
+        The Star Schema prioritizes query speed and simplicity, while the Snowflake
+        Schema focuses on data normalization and storage efficiency.
         """)
+
+        st.subheader("What is Database Normalization?")
+        st.write("""
+        Database normalization is a database design process that organizes data into
+        specific table structures.
+
+        It helps to improve data integrity, prevent data anomalies, minimize data
+        redundancy, and bolster query performance.
+        """)
+
+
+    
+        
+    
+
+
+
+    
+
+    
+
