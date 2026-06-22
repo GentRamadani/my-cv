@@ -173,9 +173,15 @@ elif page == "Projects":
 # ✅ FIXED PART (LESSONS - corrected indentation)
 elif page == "Lessons":
 
-    lesson_page = st.sidebar.selectbox(
-        "Select Lecture",
-        ["Lecture_12"]
+    st.title("Lessons")
+    st.write("""
+    Here you will find different lectures and summaries of topics
+    covered throughout the course.
+    """)
+
+    lesson_page = st.selectbox(
+        "Jump to a Lecture",
+        ["Select a Lecture", "Lecture_12"]
     )
 
     if lesson_page == "Lecture_12":
